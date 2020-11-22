@@ -1,0 +1,9 @@
+pluginManagement {
+    repositories {
+        maven { url 'https://repo.spring.io/milestone' }
+        maven { url "https://maven.mirror.markant.com/repository/maven-public/" }
+    }
+}
+
+
+rootProject.name = 'example-native-service'

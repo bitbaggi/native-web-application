@@ -1,0 +1,17 @@
+services:
+  mongo:
+    container_name: mongo
+    image: docker.mirror.markant.com/mongo:4.4.2
+    ports:
+    - 27017:27017
+
+  testapp:
+    container_name: app
+    image: test-application:3
+    ports:
+    - 8080:8081
+
+  mongo-tester:
+    container_name: tester
+    image: docker.mirror.markant.com/alpine:latest
+    entrypoint: "wget app:8080/api/test"
